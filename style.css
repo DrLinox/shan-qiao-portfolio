@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('./fonts');
 html,
 body,
 div,
@@ -138,11 +139,13 @@ body{
 
 h1{
     font-family: 'Futura Bk Bt';
+    src: url(./fonts/Futura\ Book\ font.ttf);
     font-weight: 300;
     padding: 0;
     margin: 0;
     font-size: 50px;
     color: white;
+    text-align: center;
 }
 h1 > span {
     font-family: 'Kaushan Script', cursive;
@@ -180,11 +183,13 @@ h1 > span {
     color: white;
     text-decoration: none;
     font-family: 'Futura Lt Bt';
+    src: url('./fonts/Futura\ Light\ font.ttf');
     font-size: 20px;
 }
 .Sub-header{
     font-size: 24px;
     font-family: 'Futura Lt Bt';
+    src: url('./fonts/Futura\ Light\ font.ttf');
     color: #F24B4B;
 }
 h1{
@@ -251,10 +256,12 @@ header{
 .about-me-header{
     font-size: 48px;
     font-family: 'Futura Hv Bt';
+    src: url('./fonts/Futura\ Heavy\ font.ttf');
 }
 .about-me-description{
     font-size: 16px;
     font-family: 'Futura Hv Bt';
+    src: url('./fonts/Futura\ Heavy\ font.ttf');
     line-height: 2.5;
 }
 .about-me-text{
@@ -272,6 +279,7 @@ header{
     align-items: center;
     gap: 70px;
     font-family: 'Futura Hv Bt';
+    src: url('./fonts/Futura\ Heavy\ font.ttf');
 }
 .navs li{
     cursor: pointer;
@@ -305,6 +313,7 @@ header{
 .skills-des ul{
     font-size: 20px;
     font-family: 'Futura Hv Bt';
+    src: url('./fonts/Futura\ Heavy\ font.ttf');
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -313,6 +322,7 @@ header{
 .skills-des ul li{
     font-size: 16px;
     font-family: 'Futura Hv Bt';
+    src: url('./fonts/Futura\ Heavy\ font.ttf');
     color: white;
     line-height: 2;
 }
@@ -330,6 +340,7 @@ header{
 .portfolio-header{
     font-size: 48px;
     font-family: 'Futura Hv Bt';
+    src: url('./fonts/Futura\ Heavy\ font.ttf');
 }
 .card-container{
     display: flex;
@@ -395,6 +406,7 @@ header{
 .portfolio-card{
     font-size: 32px;
     font-family: 'Futura Hv Bt';
+    src: url('./fonts/Futura\ Heavy\ font.ttf');
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -414,6 +426,7 @@ header{
     padding: 17px 0px;
     width: 15%;
     font-family: 'Futura Hv Bt';
+    src: url('./fonts/Futura\ Heavy\ font.ttf');
     border: none;
     border-radius: 30px;
     align-self: center;
@@ -440,11 +453,13 @@ header{
     font-size: 18px;
     background-color: #000000;
     font-family: 'Futura Bk Bt';
+    src: url(./fonts/Futura\ Book\ font.ttf);
     color: white;
 }
 .contact-me-header{
     font-size: 48px;
     font-family: 'Futura Hv Bt';
+    src: url('./fonts/Futura\ Heavy\ font.ttf');
 }
 .contacts{
     display: flex;
@@ -468,6 +483,7 @@ header{
 }
 .socials-text{
     font-family: 'Futura Lt Bt';
+    src: url('./fonts/Futura\ Light\ font.ttf');
     font-size: 24px;
     cursor: pointer;
 }
@@ -508,6 +524,7 @@ header{
     align-self: flex-end;
     border-radius: 0px;
     font-family: 'Futura Bk Bt';
+    src: url(./fonts/Futura\ Book\ font.ttf);
     font-size: 17px;
 }
 #Home-btn{
