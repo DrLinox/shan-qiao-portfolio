@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="index.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./images/bcade2b074293006678e49aab6659c46.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Shan Qiao</title>
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
 </head>
 <body>
-    <div class="upper-page">
+    <div class="full-page">
+           <div class="upper-page">
     <header>
-        <nav class="navbar animate__animated animate__fadeIn">
-            <div class="logo">Shan <span class="red-font">Qiao</div>
+        <nav class="navbar animate__animated">
+            <div class="logo animate__animated animate__fadeInDown">Shan <span class="red-font">Qiao</span></div>
             <ul class="nav">
                 <li class="navigation"><a href="#Home">Home</a></li>
                 <li class="navigation"><a href="#about-me">About Me</a></li>
@@ -22,8 +27,8 @@
         </nav>
     </header>
         <section id="page-hero">
-            <h1 class="animate__animated animate__fadeInDown">Hi my name is <span>Shan <span class="red-font">Qiao</span></span></h1>
-            <h2 class="Sub-header animate__animated animate__fadeInDown">Senior Concept Artist at SIE Santa Monica Studio</h2>
+            <h1 class="animate__animated">Hi my name is <span>Shan <span class="red-font">Qiao</span></span></h1>
+            <h2 class="Sub-header animate__animated">Senior Concept Artist at SIE Santa Monica Studio</h2>
         </section>
     </div>
         <section class="inner-section">
@@ -43,7 +48,7 @@
                     <span class="underline"></span>
                 </li>
             </ul>
-            <ul class="skills-des animate__animated animate__fadeIn active-des" id="skills">
+            <ul class="skills-des animate__animated active-des" id="skills">
                 <ul>Traditional skills
                     <li>Drawing / Painting / Clay Sculpting</li>
                 </ul>
@@ -86,10 +91,10 @@
             <div id="portfolio">
                 <p class="portfolio-header">My portfolio</p>
                 <div class="card-container">
-                    <div class="portfolio-card"><div class="overlay"><p>Seven Deadly Sins</p></div></div>
-                    <div class="portfolio-card"><div class="overlay"><p>Personal project 2014</p></div></div>
-                    <div class="portfolio-card"><div class="overlay"><p>Proton</p></div></div>
-                    <div class="portfolio-card"><div class="overlay"><p>Samourai Rendering</p></div></div>
+                    <a href="portfolio-template-1.html" class="portfolio-card"><div class="overlay"><p>Seven Deadly Sins</p></div></a>
+                    <a href="portfolio-template-2.html" class="portfolio-card"><div class="overlay"><p>Personal project 2014</p></div></a>
+                    <a href="portfolio-template-3.html" class="portfolio-card"><div class="overlay"><p>Prolon</p></div></a>
+                    <a href="portfolio-template-4.html" class="portfolio-card"><div class="overlay"><p>Samourai Rendering</p></div></a>
                 </div>
                 <button class="see-more">SEE MORE</button>
             </div>
@@ -115,42 +120,8 @@
                 d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z" />
         </svg></i></div>
         <footer>
-            <div class="footer-wrap">© 2023 Shan Qiao personnal portfolio / made by Master Dash</div>
-        </footer>
-        <script>
-        const navSkills = document.getElementsByClassName('navigation-skills')
-        const navDes = document.getElementsByClassName('skills-des')
-
-        function opentab(tabname){
-            for(nav of navSkills){
-                nav.classList.remove('focus')
-            }
-            for(des of navDes){
-                des.classList.remove('active-des')
-            }
-            event.currentTarget.classList.add('focus')
-            document.getElementById(tabname).classList.add('active-des')
-        }
-
-        var scrollToTopButton = document.getElementById('Home-btn');
-
-            // Show the button when the user has scrolled down a bit
-            window.addEventListener('scroll', function () {
-                if (window.scrollY > 500) {
-                    scrollToTopButton.style.display = 'flex';
-                } else {
-                    scrollToTopButton.style.display = 'none';
-                }
-            });
-
-            // Scroll to the top when the button is clicked
-            scrollToTopButton.addEventListener('click', function () {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth' // Smooth scrolling behavior
-                });
-            });
-
-        </script>
+            <div class="footer-wrap">© Shan Qiao personnal portfolio / made by Master Dash</div>
+        </footer> 
+    </div>
 </body>
 </html>

@@ -1,0 +1,429 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+ol,
+ul {
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+body {
+  height: auto;
+  margin: 0;
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  position: relative;
+  overflow-x: hidden;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.main {
+  padding: 1% 7%;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+}
+.navigation {
+  margin: 0px 30px;
+  color: white;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+}
+.navigation a:after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0%;
+  background-color: #f24b4b;
+  left: 0;
+  bottom: -5px;
+  transition: 300ms;
+  border-radius: 10px;
+}
+
+a:hover::after {
+  width: 100%;
+  transition: 300ms;
+}
+header {
+  padding: 1% 7%;
+}
+.logo {
+  font-family: "Kaushan Script", cursive;
+  font-size: 40px;
+  color: white;
+}
+.red-font {
+  color: #f24b4b;
+}
+#page-hero {
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+h1 {
+  color: white;
+}
+.carousel {
+  position: relative;
+  width: inherit;
+  height: 100%;
+}
+.fa-arrow-left {
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+.fa-arrow-right {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+.fa-arrow-left,
+.fa-arrow-right {
+  transform: translateY(-50%);
+  transition: 100ms ease-in-out;
+}
+.fa-arrow-left:hover,
+.fa-arrow-right:hover {
+  transition: 100ms ease-in-out;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.slide {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  transition: 300ms ease-in-out;
+}
+.nav_carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  gap: 20px;
+}
+.carousel_indicator {
+  border: none;
+  transform: scale(-70%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  opacity: 50%;
+  cursor: pointer;
+}
+.carousel_indicator.active {
+  opacity: 100%;
+}
+
+.slide[data-active] {
+  opacity: 100%;
+  transition: 300ms ease-in-out;
+}
+.innerpage {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.innerpage h1 {
+  font-size: 3.5rem;
+  font-family: "Kaushan Script", cursive;
+}
+.innerpage h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.des {
+  line-height: 3;
+  gap: 30px;
+}
+b {
+  color: #f24b4b;
+}
+.link {
+  color: #f24b4b;
+  text-decoration: underline;
+}
+.seven-des {
+  width: 60%;
+}
+.related {
+  font-size: 2rem;
+  max-width: 100%;
+  max-height: 100%;
+  padding-bottom: 100px;
+}
+.card-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.card-container a {
+  flex: 1 0 40%;
+  scroll-snap-align: start;
+}
+.card-container {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.card-container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+#portfolio-card-1 {
+  min-width: 430px;
+  height: 450px;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./images/SevenDeadlySins/shan-qiao-greed-render-min.jpg");
+  border-radius: 41px;
+  transition: 300ms;
+  display: flex;
+  align-self: center;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+  border-radius: 41px;
+  transition: 600ms;
+}
+.portfolio-card:hover {
+  transform: scale(1.01);
+  transition: 600ms;
+}
+#portfolio-card-2 {
+  min-width: 430px;
+  height: 450px;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./images/Prolon/shan-qiao-polished001-min.jpg");
+  border-radius: 41px;
+  display: flex;
+  align-self: center;
+}
+#portfolio-card-3 {
+  min-width: 430px;
+  height: 450px;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./images/SamuraiRendering2/shan-qiao-samurai-hawk-min.jpg");
+  border-radius: 41px;
+  display: flex;
+  align-self: center;
+}
+#portfolio-card-4 {
+  min-width: 430px;
+  height: 450px;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./images/Compressed/shan-qiao-polished001-min.jpg");
+  border-radius: 41px;
+  display: flex;
+  align-self: center;
+}
+.overlay {
+  font-size: 32px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.overlay > p {
+  margin-bottom: 100px;
+}
+.footer-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  font-size: 16px;
+  background-color: rgb(23, 23, 23);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: white;
+  width: 100%;
+}

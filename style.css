@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
-@import url('./fonts');
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 html,
 body,
 div,
@@ -81,12 +81,12 @@ time,
 mark,
 audio,
 video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -102,524 +102,579 @@ menu,
 nav,
 ol,
 ul {
-    list-style: none;
+  list-style: none;
 }
-html{
-    scroll-behavior: smooth;
-    overflow-x: hidden;
+html {
+  scroll-behavior: smooth !important;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 blockquote,
 q {
-    quotes: none;
+  quotes: none;
 }
-a{
-    color: white;
-    text-decoration: none;
-    position: relative;
+a {
+  color: white;
+  text-decoration: none;
+  position: relative;
 }
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
-    content: none;
+  content: "";
+  content: none;
 }
-
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-body{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    position: relative;
+.loader-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
 }
 
-h1{
-    font-family: 'Futura Bk Bt';
-    src: url(./fonts/Futura\ Book\ font.ttf);
-    font-weight: 300;
-    padding: 0;
-    margin: 0;
-    font-size: 50px;
-    color: white;
-    text-align: center;
+.loader {
+  border: 6px solid #f3f3f341;
+  border-top: 6px solid #f24b4b;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin ease infinite;
+  animation-duration: 1s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  src: url(./fonts/Futura\ Book\ font.ttf);
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  font-size: 50px;
+  color: white;
+  text-align: center;
 }
 h1 > span {
-    font-family: 'Kaushan Script', cursive;
-    font-size: 75px;
+  font-family: "Kaushan Script", cursive;
+  font-size: 80px;
+  font-weight: 300;
 }
-.red-font{
-    color: #F24B4B;
+.red-font {
+  color: #f24b4b;
 }
-#page-hero{
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 25px 0;
-    padding: 1% 10%;
+#page-hero {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px 0;
+  padding: 1% 10%;
 }
-.logo{
-    font-family: 'Kaushan Script', cursive;
-    font-size: 40px;
-    color:white
+.logo {
+  font-family: "Kaushan Script", cursive;
+  font-size: 40px;
+  color: white;
 }
 .nav {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 .navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 .navigation {
-    margin: 0px 30px;
-    color: white;
-    text-decoration: none;
-    font-family: 'Futura Lt Bt';
-    src: url('./fonts/Futura\ Light\ font.ttf');
-    font-size: 20px;
+  margin: 0px 30px;
+  color: white;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
 }
-.Sub-header{
-    font-size: 24px;
-    font-family: 'Futura Lt Bt';
-    src: url('./fonts/Futura\ Light\ font.ttf');
-    color: #F24B4B;
+.Sub-header {
+  font-size: 22px;
+  font-family: "Open Sans", sans-serif;
+  color: #f24b4b;
 }
-h1{
-    font-size: 64px;
-    letter-spacing: 1.5px;
+h1 {
+  font-size: 64px;
+  letter-spacing: 1.5px;
 }
-.navigation a:after{
-    content: "";
-    position: absolute;
-    height: 3px;
-    width: 0%;
-    background-color: #F24B4B;
-    left: 0;
-    bottom: -5px;
-    transition: 300ms;
-    border-radius: 10px;
+.navigation a:after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0%;
+  background-color: #f24b4b;
+  left: 0;
+  bottom: -5px;
+  transition: 300ms;
+  border-radius: 10px;
 }
-a:hover::after{
-    width: 100%;
-    transition: 300ms;
+a:hover::after {
+  width: 100%;
+  transition: 300ms;
 }
-.inner-section{
-    background-image: linear-gradient(rgba(0, 0, 0, 1),rgba(255, 255, 255, 0));
-    background-color: #3A3939;
-    color: white;
+.inner-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(255, 255, 255, 0));
+  background-color: #3a3939;
+  color: white;
 }
-.description-img{
-    background-origin: border-box;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url("./images/shan-qiao-worlds2020-full-kv-1920x1080-002.jpg");
-    width: 494px;
-    height: 758px;
-    border-radius: 41px;
-    box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.3);
-    transition: 300ms;
+.description-img {
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./images/Compressed/shan-qiao-worlds2020-full-kv-1920x1080-002-min.jpg");
+  width: 494px;
+  height: 758px;
+  border-radius: 41px;
+  box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.3);
+  transition: 300ms;
 }
-#hide{
+.hide {
+  display: none;
+}
+.description-img:hover {
+  transform: scale(1.01);
+  transition: 300ms;
+}
+header {
+  padding: 1% 7%;
+}
+.upper-page {
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)),
+    url("./images/Compressed/shan-qiao-006bfkgdgy1fsyvlapifkj322o0qo7v4-min.jpg");
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#about-me {
+  display: flex;
+  flex-direction: row;
+  height: 1116px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 7%;
+}
+.about-me-header {
+  font-size: 48px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+.about-me-description {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 2.5;
+}
+.about-me-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 700px;
+  gap: 50px;
+  width: 602px;
+}
+.navs {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 70px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+.navs li {
+  cursor: pointer;
+  position: relative;
+}
+.underline {
+  position: absolute;
+  height: 3px;
+  width: 0%;
+  background-color: #f24b4b;
+  left: 0;
+  bottom: -5px;
+  transition: 300ms;
+  border-radius: 10px;
+}
+.navigation-skills:hover > .underline {
+  width: 100%;
+  transition: 300ms;
+}
+.focus > .underline {
+  width: 100%;
+}
+.skills-des {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  gap: 30px;
+  display: none;
+}
+.skills-des ul {
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #f24b4b;
+}
+.skills-des ul li {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  color: white;
+  line-height: 2;
+}
+.active-des {
+  display: flex;
+}
+#portfolio {
+  padding: 2% 7%;
+  min-height: 1352px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 50px;
+}
+.portfolio-header {
+  font-size: 48px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  gap: 40px 0;
+}
+.portfolio-card:nth-of-type(1) {
+  width: 630px;
+  height: 600px;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./images/SevenDeadlySins/shan-qiao-greed-render-min.jpg");
+  border-radius: 41px;
+  transition: 300ms;
+  display: flex;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+  border-radius: 41px;
+  transition: 600ms;
+}
+.portfolio-card:hover {
+  transform: scale(1.01);
+  transition: 600ms;
+}
+.portfolio-card:nth-of-type(2) {
+  width: 630px;
+  height: 600px;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./images/PersonalProject2014/shan-qiao-observer-min.jpg");
+  border-radius: 41px;
+}
+.portfolio-card:nth-of-type(3) {
+  width: 630px;
+  height: 600px;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./images/Prolon/shan-qiao-polished001-min.jpg");
+  border-radius: 41px;
+}
+.portfolio-card:nth-of-type(4) {
+  width: 630px;
+  height: 600px;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./images/SamuraiRendering2/shan-qiao-samurai-hawk-min.jpg");
+  border-radius: 41px;
+}
+.overlay {
+  font-size: 32px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.overlay > p {
+  margin-bottom: 100px;
+}
+.see-more {
+  padding: 17px 0px;
+  width: 15%;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  border: none;
+  border-radius: 30px;
+  align-self: center;
+  font-size: 16px;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+  transition: 300ms;
+}
+.see-more:hover {
+  color: #f24b4b;
+  transform: scale(1.02);
+  transition: 300ms;
+}
+#contact-me {
+  padding: 5% 7%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.footer-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  font-size: 16px;
+  background-color: #000000;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  color: white;
+}
+.contact-me-header {
+  font-size: 48px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+.contacts {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 30px;
+}
+.socials-image {
+  background-color: white;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.contacts > div > img {
+  width: 40px;
+  height: 40px;
+}
+.socials-text {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  cursor: pointer;
+}
+.contact-me-input {
+  padding: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  background-color: rgba(0, 0, 0, 0.5);
+  outline: none;
+  border: none;
+  font-size: 16px;
+  color: white;
+}
+.contact-me-description {
+  height: 100px;
+  padding: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.5);
+  outline: none;
+  border: none;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+.contact-me-input:focus,
+.contact-me-description:focus {
+  outline-width: 2px;
+  outline-color: white;
+  outline-offset: 4px;
+  outline-style: solid;
+  border-radius: 10px;
+}
+.input-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 30px;
+}
+.submit {
+  width: 15%;
+  padding: 15px;
+  align-self: flex-end;
+  border-radius: 0px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 10px;
+  transition: 300ms ease-in-out;
+}
+.submit:hover {
+  transition: 300ms ease-in-out;
+  transform: scale(1.05);
+}
+.submit:active {
+  transform: scale(1);
+  transition: 300ms ease-in-out;
+}
+#Home-btn {
+  position: fixed;
+  cursor: pointer;
+  top: 90%;
+  right: 5%;
+  background-color: #f24b4b;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 300ms ease-out;
+  display: none;
+}
+#Home-btn:hover {
+  transform: scale(1.05);
+  transition: 300ms ease-in;
+}
+#Home-btn > svg {
+  fill: white;
+  width: 20px;
+  height: 20px;
+}
+@media (max-width: 1464px) {
+  .description-img {
     display: none;
-}
-.description-img:hover{
-    transform: scale(1.01);
-    transition: 300ms;
-}
-header{
-    padding: 1% 7%;
-}
-.upper-page{
-    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url("./images/shan-qiao-006bfkgdgy1fsyvlapifkj322o0qo7v4.jpg");
-    background-origin: border-box;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-#about-me{
-    display: flex;
-    flex-direction: row;
-    height: 1116px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1% 7%;
-}
-.about-me-header{
-    font-size: 48px;
-    font-family: 'Futura Hv Bt';
-    src: url('./fonts/Futura\ Heavy\ font.ttf');
-}
-.about-me-description{
-    font-size: 16px;
-    font-family: 'Futura Hv Bt';
-    src: url('./fonts/Futura\ Heavy\ font.ttf');
-    line-height: 2.5;
-}
-.about-me-text{
-    display: flex;
-    flex-direction: column;
+  }
+  #about-me {
     justify-content: center;
-    height: 700px;
-    gap: 50px;
-    width: 602px;
-}
-.navs{
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    gap: 70px;
-    font-family: 'Futura Hv Bt';
-    src: url('./fonts/Futura\ Heavy\ font.ttf');
-}
-.navs li{
-    cursor: pointer;
-    position: relative;
-}
-.underline{
-    position: absolute;
-    height: 3px;
-    width: 0%;
-    background-color: #F24B4B;
-    left: 0;
-    bottom: -5px;
-    transition: 300ms;
-    border-radius: 10px;
-}
-.navigation-skills:hover > .underline{
-    width: 100%;
-    transition: 300ms;
-}
-.focus > .underline{
-    width: 100%;
-}
-.skills-des{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 100%;
-    gap: 30px;
-    display: none;
-}
-.skills-des ul{
-    font-size: 20px;
-    font-family: 'Futura Hv Bt';
-    src: url('./fonts/Futura\ Heavy\ font.ttf');
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    color: #F24B4B;
-}
-.skills-des ul li{
-    font-size: 16px;
-    font-family: 'Futura Hv Bt';
-    src: url('./fonts/Futura\ Heavy\ font.ttf');
-    color: white;
-    line-height: 2;
-}
-.active-des{
-    display: flex;
-}
-#portfolio{
-    padding: 2% 7%;
-    min-height: 1352px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    gap: 50px;
-}
-.portfolio-header{
-    font-size: 48px;
-    font-family: 'Futura Hv Bt';
-    src: url('./fonts/Futura\ Heavy\ font.ttf');
-}
-.card-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: center;
-    gap: 40px 0;
-}
-.portfolio-card:nth-child(1){
-    width: 630px;
-    height: 600px;
-    background-origin: border-box;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image:url("./images/shan-qiao-greed-render.jpg");
-    border-radius: 41px;
-    transition: 300ms;
-    display: flex;
-}
-.overlay{
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
-    border-radius: 41px;
-    transition: 600ms;
-}
-.portfolio-card:hover{
-    transform: scale(1.01);
-    transition: 600ms;
-}
-.portfolio-card:nth-child(2){
-    width: 630px;
-    height: 600px;
-    background-origin: border-box;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url("./images/shan-qiao-observer.jpg");
-    border-radius: 41px;
-}
-.portfolio-card:nth-child(3){
-    width: 630px;
-    height: 600px;
-    background-origin: border-box;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url("./images/shan-qiao-polished001.jpg");
-    border-radius: 41px;
-}
-.portfolio-card:nth-child(4){
-    width: 630px;
-    height: 600px;
-    background-origin: border-box;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url("./images/shan-qiao-samurai-hawk.jpg");
-    border-radius: 41px;
-}
-.portfolio-card{
-    font-size: 32px;
-    font-family: 'Futura Hv Bt';
-    src: url('./fonts/Futura\ Heavy\ font.ttf');
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    position: relative;
-    box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-}
-.overlay{
-    display: flex;
-    justify-content: center;
-    align-items: end;
-}
-.overlay>p{
-    margin-bottom: 100px;
-}
-.see-more{
-    padding: 17px 0px;
-    width: 15%;
-    font-family: 'Futura Hv Bt';
-    src: url('./fonts/Futura\ Heavy\ font.ttf');
-    border: none;
-    border-radius: 30px;
-    align-self: center;
-    font-size: 16px;
-    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
-    transition: 300ms;
-}
-.see-more:hover{
-    color: #F24B4B;
-    transform: scale(1.02);
-    transition: 300ms;
-}
-#contact-me{
-    padding: 5% 7%;
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-}
-.footer-wrap{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 75px;
-    font-size: 18px;
-    background-color: #000000;
-    font-family: 'Futura Bk Bt';
-    src: url(./fonts/Futura\ Book\ font.ttf);
-    color: white;
-}
-.contact-me-header{
-    font-size: 48px;
-    font-family: 'Futura Hv Bt';
-    src: url('./fonts/Futura\ Heavy\ font.ttf');
-}
-.contacts{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 30px;
-}
-.socials-image{
-    background-color: white;
-    width: 65px;
-    height: 65px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    cursor: pointer;
-}
-.contacts>div>img{
-    width: 40px;
-    height: 40px;
-}
-.socials-text{
-    font-family: 'Futura Lt Bt';
-    src: url('./fonts/Futura\ Light\ font.ttf');
-    font-size: 24px;
-    cursor: pointer;
-}
-.contact-me-input{
-    padding: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    background-color: rgba(0, 0, 0,0.5);
-    outline: none;
-    border: none;
-    font-size: 16px;
-    color: white;
-}
-.contact-me-description{
-    height: 100px;
-    padding: 20px;
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    font-size: 16px;
-    background-color: rgba(0, 0, 0,0.5);
-    outline: none;
-    border: none;
-    color: white;
-}
-.input-wrapper{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    flex-direction: column;
-    gap: 30px;
-}
-.submit{
-    width: 15%;
-    padding: 15px;
-    align-self: flex-end;
-    border-radius: 0px;
-    font-family: 'Futura Bk Bt';
-    src: url(./fonts/Futura\ Book\ font.ttf);
-    font-size: 17px;
-}
-#Home-btn{
-    position: fixed;
-    cursor: pointer;
-    top: 90%;
-    right: 5%;
-    background-color: #F24B4B;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 300ms ease-out;
-    display: none;
-}
-#Home-btn:hover{
-    transform: scale(1.05);
-    transition: 300ms ease-in;
-}
-#Home-btn>svg{
-    fill: white;
-    width: 20px;
-    height: 20px;
-}
-@media (max-width:1464px){
-    .description-img{
-        display: none;
-    }
-    #about-me{
-        justify-content: center;
-    }
-    .card-container{
-        justify-content: center;
-        align-content: center;
-    }
-    .portfolio-card{
-        width: 100%;
-    }
-    .card-container{
-        width: 100%;
-    }
-    .overlay{
-        width: 100%;
-    }
-    #portfolio{
-        align-items: center;
-        gap: 50px 0;
-    }
-    .inner-section{
-        min-height: 5000px;
-    }
-    .portfolio-header{
-        text-align: center;
-    }
-    .see-more{
-        width: 30%;
-    }
-}
-@media (max-width: 1080px){
-    .nav{
-        display: none;
-    }
-    .card-container{
+  }
+  .card-container {
     justify-content: center;
     align-content: center;
-    }
-    #portfolio{
+  }
+  .portfolio-card {
+    width: 100%;
+  }
+  .card-container {
+    width: 100%;
+  }
+  .overlay {
+    width: 100%;
+  }
+  #portfolio {
     align-items: center;
     gap: 50px 0;
-    }
-    .socials-text{
-        display: none;
-    }
-    .submit{
+  }
+  .inner-section {
+    min-height: 5000px;
+  }
+  .portfolio-header {
+    text-align: center;
+  }
+  .Sub-header {
+    text-align: center;
+  }
+  .see-more {
+    width: 30%;
+  }
+}
+@media (max-width: 1080px) {
+  .nav {
+    display: none;
+  }
+  .card-container {
+    justify-content: center;
+    align-content: center;
+  }
+  #portfolio {
+    align-items: center;
+    gap: 50px 0;
+  }
+  .socials-text {
+    display: none;
+  }
+  .submit {
     width: 100%;
-    }
-    .contacts{
+  }
+  .contacts {
     display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 30px;
-    }
-    .contact-me-header{
-        text-align: center;
-    }
-    .navbar{
-        justify-content: center;
-        align-items: center;
-    }
-    .logo{
-        font-size: 52px;
-    }
-    header{
+  }
+  .contact-me-header {
+    text-align: center;
+  }
+  .navbar {
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    font-size: 52px;
+  }
+  header {
     padding: 3% 7%;
-    }
+  }
 }
